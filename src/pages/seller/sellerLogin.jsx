@@ -39,7 +39,7 @@ export default function SellerLogin() {
 
   try {
     const res = await axios.post(
-      "http://localhost:8000/api/v1/sellers/login",
+      "https://pagify-g5g5.onrender.com/api/v1/sellers/login",
       formData
     );
 

@@ -3,7 +3,7 @@ import React, { useState,useEffect } from 'react';
 import axios from 'axios'; // Import axios for making HTTP requests
 
 // Define the assumed backend endpoint based on the previous files
-const API_BASE_URL = 'http://localhost:8000/api/v1/auth/signup';
+const API_BASE_URL = 'https://pagify-g5g5.onrender.com/api/v1/auth/signup';
 
 // Main App component which contains the entire signup page.
 // We are exporting this as UserSignup, matching the router configuration.

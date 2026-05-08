@@ -27,7 +27,7 @@ export default function AdminDashboard({ onGoToProducts, onGoToUsers, onGoToOrde
         const token = localStorage.getItem('token');
         
         // Fetch stats
-        const statsRes = await axios.get('http://localhost:8000/api/v1/orders/admin-stats', {
+        const statsRes = await axios.get('https://pagify-g5g5.onrender.com/api/v1/orders/admin-stats', {
           headers: { Authorization: `Bearer ${token}` }
         });
         
@@ -36,7 +36,7 @@ export default function AdminDashboard({ onGoToProducts, onGoToUsers, onGoToOrde
         }
 
         // Fetch recent orders
-        const ordersRes = await axios.get('http://localhost:8000/api/v1/orders/all', {
+        const ordersRes = await axios.get('https://pagify-g5g5.onrender.com/api/v1/orders/all', {
           headers: { Authorization: `Bearer ${token}` }
         });
         

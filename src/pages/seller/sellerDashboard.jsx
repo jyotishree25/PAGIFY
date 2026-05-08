@@ -119,7 +119,7 @@ useEffect(() => {
         navigate("/seller/login");
         return;
       }
-      const res = await axios.get("http://localhost:8000/api/v1/sellers/me", {
+      const res = await axios.get("https://pagify-g5g5.onrender.com/api/v1/sellers/me", {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (res.data.status === "success") {
@@ -142,7 +142,7 @@ useEffect(() => {
       if (!token) return;
 
       // Fetch stats
-      const statsRes = await axios.get("http://localhost:8000/api/v1/sellers/dashboard-stats", {
+      const statsRes = await axios.get("https://pagify-g5g5.onrender.com/api/v1/sellers/dashboard-stats", {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (statsRes.data.status === "success") {
@@ -150,7 +150,7 @@ useEffect(() => {
       }
 
       // Fetch orders (existing logic could be updated to fetch from backend too)
-      const ordersRes = await axios.get("http://localhost:8000/api/v1/orders/all", {
+      const ordersRes = await axios.get("https://pagify-g5g5.onrender.com/api/v1/orders/all", {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (ordersRes.data.status === "success") {
@@ -239,7 +239,7 @@ useEffect(() => {
       const token = localStorage.getItem("sellerToken");
 
       const res = await axios.get(
-        "http://localhost:8000/api/v1/sellers/products/my-products",
+        "https://pagify-g5g5.onrender.com/api/v1/sellers/products/my-products",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -349,7 +349,7 @@ useEffect(() => {
 
   // 2️⃣ Verify token with backend
   axios
-    .get("http://localhost:8000/api/v1/sellers/me", {
+    .get("https://pagify-g5g5.onrender.com/api/v1/sellers/me", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -460,7 +460,7 @@ useEffect(() => {
         bankAccount: companyEdit.bankAccount,
       };
       const res = await axios.patch(
-        "http://localhost:8000/api/v1/sellers/me",
+        "https://pagify-g5g5.onrender.com/api/v1/sellers/me",
         payload,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -529,7 +529,7 @@ useEffect(() => {
         return;
       }
       const res = await axios.patch(
-        "http://localhost:8000/api/v1/sellers/change-password",
+        "https://pagify-g5g5.onrender.com/api/v1/sellers/change-password",
         {
           currentPassword: securityState.currentPassword,
           newPassword: securityState.newPassword,
@@ -565,7 +565,7 @@ useEffect(() => {
       const fd = new FormData();
       fd.append("profilePicture", file);
       const res = await axios.post(
-        "http://localhost:8000/api/v1/sellers/upload-profile-picture",
+        "https://pagify-g5g5.onrender.com/api/v1/sellers/upload-profile-picture",
         fd,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -589,7 +589,7 @@ useEffect(() => {
         return;
       }
       const res = await axios.patch(
-        "http://localhost:8000/api/v1/sellers/me",
+        "https://pagify-g5g5.onrender.com/api/v1/sellers/me",
         fields,
         { headers: { Authorization: `Bearer ${token}` } }
       );

@@ -18,7 +18,7 @@ const ProductDetails = () => {
   const [profileImage, setProfileImage] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
 
-  const API = "http://localhost:8000/api/v1";
+  const API = "https://pagify-g5g5.onrender.com/api/v1";
   const { cartCount, wishlistCount, addToCart: addToCartCtx, fetchCounts, setUserId: setCtxUser } = useInventory();
 
   // Fetch current user to scope cart/wishlist counts consistently

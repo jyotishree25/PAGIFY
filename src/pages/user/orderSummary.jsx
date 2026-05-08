@@ -185,7 +185,7 @@ const OrderSummaryCard = ({ subtotal, discount, onApplyCoupon, couponCode, setCo
           try {
             const token = localStorage.getItem('token');
             if (token) {
-              const meResponse = await axios.get('http://localhost:8000/api/v1/users/me', {
+              const meResponse = await axios.get('https://pagify-g5g5.onrender.com/api/v1/users/me', {
                 headers: { Authorization: `Bearer ${token}` }
               });
               const userData = meResponse.data?.user;
@@ -263,7 +263,7 @@ const OrderSummaryCard = ({ subtotal, discount, onApplyCoupon, couponCode, setCo
       try {
         const token = localStorage.getItem('token');
         if (token) {
-          const meResponse = await axios.get('http://localhost:8000/api/v1/users/me', {
+          const meResponse = await axios.get('https://pagify-g5g5.onrender.com/api/v1/users/me', {
             headers: { Authorization: `Bearer ${token}` }
           });
           const userData = meResponse.data?.user;
@@ -548,7 +548,7 @@ const OrderSummary = () => {
         let currentUserId = null;
         if (token) {
           try {
-            const meResponse = await axios.get('http://localhost:8000/api/v1/users/me', {
+            const meResponse = await axios.get('https://pagify-g5g5.onrender.com/api/v1/users/me', {
               headers: { Authorization: `Bearer ${token}` }
             });
             const userData = meResponse.data?.user;
@@ -627,7 +627,7 @@ const OrderSummary = () => {
       if (needsDetails) {
         try {
           const productIds = storedCart.map(item => item._id || item.id);
-          const response = await axios.post('http://localhost:8000/api/v1/cart', {
+          const response = await axios.post('https://pagify-g5g5.onrender.com/api/v1/cart', {
             productIds
           });
 

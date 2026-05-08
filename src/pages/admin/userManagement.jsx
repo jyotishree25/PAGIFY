@@ -21,7 +21,7 @@ export default function UserManagement({ onBack, darkMode }) {
         const token = localStorage.getItem('token');
         const config = token ? { headers: { Authorization: `Bearer ${token}` } } : {};
         
-        const response = await axios.get('http://localhost:8000/api/v1/users', config);
+        const response = await axios.get('https://pagify-g5g5.onrender.com/api/v1/users', config);
         
         if (response.data.status === 'success') {
           const mappedUsers = response.data.users.map(u => ({

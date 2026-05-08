@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = 'http://localhost:8000/api/v1';
+const API = 'https://pagify-g5g5.onrender.com/api/v1';
 
 const authHeaders = () => {
   const token = localStorage.getItem('token');

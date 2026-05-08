@@ -186,7 +186,7 @@ export default function HomePage() {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post('http://localhost:8000/api/v1/users/upload-profile-picture', formData, {
+      const response = await axios.post('https://pagify-g5g5.onrender.com/api/v1/users/upload-profile-picture', formData, {
         headers: { 
             Authorization: `Bearer ${token}`,
             'Content-Type': 'multipart/form-data'
@@ -244,7 +244,7 @@ export default function HomePage() {
         ifscCode: editFormData.ifscCode
       };
 
-      const response = await axios.patch('http://localhost:8000/api/v1/users/me', payload, {
+      const response = await axios.patch('https://pagify-g5g5.onrender.com/api/v1/users/me', payload, {
         headers: { Authorization: `Bearer ${token}` }
       });
       
@@ -295,7 +295,7 @@ export default function HomePage() {
       return;
     }
 
-    axios.get('http://localhost:8000/api/v1/users/me', {
+    axios.get('https://pagify-g5g5.onrender.com/api/v1/users/me', {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -346,7 +346,7 @@ export default function HomePage() {
 
 useEffect(() => {
   axios
-    .get('http://localhost:8000/api/v1/products/public')
+    .get('https://pagify-g5g5.onrender.com/api/v1/products/public')
     .then((res) => {
       setBooksFromDB(res.data.products);
     })

@@ -141,7 +141,7 @@ export default function AddProduct({ onBack, darkMode }) {
 
       // 3) Send to backend
       const res = await axios.post(
-        "http://localhost:8000/api/v1/products/add",
+        "https://pagify-g5g5.onrender.com/api/v1/products/add",
         payload
       );
 

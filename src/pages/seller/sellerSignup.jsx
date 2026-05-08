@@ -80,7 +80,7 @@ export default function SellerSignup() {
     const fd = new FormData();
     Object.entries(formData).forEach(([k, v]) => fd.append(k, v));
     if (profilePicFile) fd.append("profilePicture", profilePicFile);
-    await axios.post("http://localhost:8000/api/v1/sellers/signup", fd, {
+    await axios.post("https://pagify-g5g5.onrender.com/api/v1/sellers/signup", fd, {
       headers: { "Content-Type": "multipart/form-data" }
     });
 

@@ -43,7 +43,7 @@ export default function BestsellerComponent({ theme = 'light' }) {
   const fetchBestsellers = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:8000/api/v1/products/bestsellers/list?limit=20');
+      const response = await axios.get('https://pagify-g5g5.onrender.com/api/v1/products/bestsellers/list?limit=20');
       if (response.data.products) {
         setBestsellers(response.data.products);
       }

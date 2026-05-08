@@ -126,7 +126,7 @@ export default function WishlistPage() {
       const token = localStorage.getItem('token');
       if (token) {
         try {
-          const me = await axios.get('http://localhost:8000/api/v1/users/me', { headers: { Authorization: `Bearer ${token}` } });
+          const me = await axios.get('https://pagify-g5g5.onrender.com/api/v1/users/me', { headers: { Authorization: `Bearer ${token}` } });
           const userData = me.data?.user;
           const uid = userData?._id || userData?.id;
           if (uid) {
@@ -155,7 +155,7 @@ export default function WishlistPage() {
         }
 
         try {
-          const response = await axios.post('http://localhost:8000/api/v1/cart', {
+          const response = await axios.post('https://pagify-g5g5.onrender.com/api/v1/cart', {
             productIds: ids
           });
           if (response.data && response.data.status === 'success' && response.data.products) {

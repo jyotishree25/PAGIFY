@@ -39,7 +39,7 @@ export default function ManageBook({ darkMode = false }) {
         }
 
         const res = await axios.get(
-          "http://localhost:8000/api/v1/sellers/products/my-products",
+          "https://pagify-g5g5.onrender.com/api/v1/sellers/products/my-products",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -94,7 +94,7 @@ export default function ManageBook({ darkMode = false }) {
       const token = localStorage.getItem("sellerToken");
 
       await axios.delete(
-        `http://localhost:8000/api/v1/sellers/products/${productId}`,
+        `https://pagify-g5g5.onrender.com/api/v1/sellers/products/${productId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -113,7 +113,7 @@ export default function ManageBook({ darkMode = false }) {
       const token = localStorage.getItem("sellerToken");
 
       const res = await axios.put(
-        `http://localhost:8000/api/v1/sellers/products/${productId}`,
+        `'https://pagify-g5g5.onrender.com/api/v1/sellers/products/${productId}`,
         { stock: tempStock },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -131,7 +131,7 @@ export default function ManageBook({ darkMode = false }) {
       const token = localStorage.getItem("sellerToken");
 
       const res = await axios.put(
-        `http://localhost:8000/api/v1/sellers/products/${productId}`,
+        `https://pagify-g5g5.onrender.com/api/v1/sellers/products/${productId}`,
         editForm,
         { headers: { Authorization: `Bearer ${token}` } }
       );

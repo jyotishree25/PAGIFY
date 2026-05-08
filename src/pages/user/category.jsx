@@ -146,7 +146,7 @@ const BookCard = ({ book, onWishlistClick, onCartClick, onPremiumClick, isWishli
 
 // --- Main App Component ---
 export const App = () => {
-    const API = 'http://localhost:8000/api/v1'
+    const API = 'https://pagify-g5g5.onrender.com/api/v1'
     const PRICE_SLIDER_MAX = 10000
     const [books, setBooks] = useState([])
     const [wishlist, setWishlist] = useState(new Set())

@@ -94,7 +94,7 @@ export default function AddBook({ darkMode = false }) {
       if (pdfFile) data.append("bookPdf", pdfFile);
 
       await axios.post(
-        "http://localhost:8000/api/v1/sellers/products/add",
+        "https://pagify-g5g5.onrender.com/api/v1/sellers/products/add",
         data,
         {
           headers: {

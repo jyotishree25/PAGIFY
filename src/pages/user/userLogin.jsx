@@ -32,7 +32,7 @@ const App = () => {
     if (!validateForm()) return;
 
     try {
-      const res = await axios.post('http://localhost:8000/api/v1/auth/login', {
+      const res = await axios.post('https://pagify-g5g5.onrender.com/api/v1/auth/login', {
         email: formData.email,
         password: formData.password,
       });

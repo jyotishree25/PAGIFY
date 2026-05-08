@@ -14,7 +14,7 @@ export default function SellerManagement({ darkMode }) {
   useEffect(() => {
     const fetchSellers = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/api/v1/sellers");
+        const res = await axios.get("https://pagify-g5g5.onrender.com/api/v1/sellers");
         if (res.data.status === "success") {
           const mapped = res.data.sellers.map((s) => ({
             id: s._id,
@@ -74,7 +74,7 @@ export default function SellerManagement({ darkMode }) {
 
   const toggleBlock = async (seller) => {
     try {
-      const res = await axios.patch(`http://localhost:8000/api/v1/sellers/${seller.id}`, {
+      const res = await axios.patch(`https://pagify-g5g5.onrender.com/api/v1/sellers/${seller.id}`, {
         isBlocked: !seller.isBlocked,
       });
       if (res.data.status === "success") {
@@ -102,7 +102,7 @@ export default function SellerManagement({ darkMode }) {
       return;
     }
     try {
-      const res = await axios.post(`http://localhost:8000/api/v1/sellers/${mailTarget.id}/notify`, {
+      const res = await axios.post(`https://pagify-g5g5.onrender.com/api/v1/sellers/${mailTarget.id}/notify`, {
         subject: mailSubject,
         message: mailBody,
       });

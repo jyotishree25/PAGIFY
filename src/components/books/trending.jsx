@@ -43,7 +43,7 @@ export default function TrendingBooks({ theme = 'light' }) {
   const fetchTrending = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:8000/api/v1/products/public');
+      const response = await axios.get('https://pagify-g5g5.onrender.com/api/v1/products/public');
       if (response.data.products) {
         setTrendingBooks(response.data.products);
       }

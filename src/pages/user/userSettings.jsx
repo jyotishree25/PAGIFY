@@ -9,7 +9,7 @@ import { useInventory } from "../../context/InventoryContext.jsx";
  * - Maps customerName <-> name for the backend.
  */
 
-const API_BASE = 'http://localhost:8000/api/v1';
+const API_BASE = 'https://pagify-g5g5.onrender.com/api/v1';
 
 // --- Custom Toast Component (unchanged, just reused) ---
 function Toast({ message, isVisible, type, onClose }) {

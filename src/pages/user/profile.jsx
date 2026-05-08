@@ -22,7 +22,7 @@ const UserProfile = () => {
   const fetchUserData = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:8000/api/v1/users/me', {
+      const response = await axios.get('https://pagify-g5g5.onrender.com/api/v1/users/me', {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (response.data.status === 'success') {
@@ -63,7 +63,7 @@ const UserProfile = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.patch('http://localhost:8000/api/v1/users/me', formData, {
+      const response = await axios.patch('https://pagify-g5g5.onrender.com/api/v1/users/me', formData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (response.data.status === 'success') {
@@ -86,7 +86,7 @@ const UserProfile = () => {
     setUploading(true);
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post('http://localhost:8000/api/v1/users/upload-profile-picture', formData, {
+      const response = await axios.post('https://pagify-g5g5.onrender.com/api/v1/users/upload-profile-picture', formData, {
         headers: { 
             Authorization: `Bearer ${token}`,
             'Content-Type': 'multipart/form-data'
